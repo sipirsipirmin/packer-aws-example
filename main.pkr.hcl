@@ -20,5 +20,8 @@ build {
  provisioner "shell" {
     script = "./scripts/install-nginx.sh"
   }
+  post-processor "manifest"  {
+      output= "manifest.json"
+    }
 }
 
